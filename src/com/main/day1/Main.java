@@ -16,7 +16,9 @@ public class Main {
                 FuelCounter.counterUpper();
                 break;
             case "2":
-                OpCode.opSwitch();
+                int findVal = 0;
+                while(findVal != 19690720)
+                    findVal = OpCode.opSwitch();
                 break;
             default:
                 System.out.println("No Calculations found for the given day");
