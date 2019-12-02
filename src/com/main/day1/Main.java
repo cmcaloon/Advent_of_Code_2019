@@ -1,5 +1,6 @@
 package com.main.day1;
 
+import com.main.day2.OpCode;
 import java.util.Scanner;
 
 public class Main {
@@ -15,6 +16,7 @@ public class Main {
                 FuelCounter.counterUpper();
                 break;
             case "2":
+                OpCode.opSwitch();
                 break;
             default:
                 System.out.println("No Calculations found for the given day");
