@@ -1,0 +1,23 @@
+package com.main.day1;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Enter the day numerically for execution");
+        Scanner enterDay = new Scanner(System.in);
+        String dayCalc = enterDay.nextLine();
+
+        switch(dayCalc)
+        {
+            case "1":
+                FuelCounter.counterUpper();
+                break;
+            case "2":
+                break;
+            default:
+                System.out.println("No Calculations found for the given day");
+        }
+    }
+}

@@ -1,4 +1,4 @@
-package com.company;
+package com.main.day1;
 
 public class FuelCounter {
     //Assigns current double value as an Int to remove the remainder
