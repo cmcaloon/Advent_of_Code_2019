@@ -1,6 +1,8 @@
 package com.main.day3;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
 
 public class WireMapCross {
     private static int smallestValue = 10000;
@@ -150,6 +152,7 @@ public class WireMapCross {
         HashMap<Integer, HashMap<Integer, String>> wireMap = new HashMap<>();
          outputGrid(wireMap);
          System.out.println("Shortest Manhatten distance is " + smallestValue);
+
     }
 
 
