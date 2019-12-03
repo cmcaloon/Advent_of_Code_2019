@@ -1,6 +1,7 @@
 package com.main.day1;
 
 import com.main.day2.OpCode;
+import com.main.day3.WireMapCross;
 import com.main.day4.PasswordCracker;
 
 import java.util.List;
@@ -26,6 +27,9 @@ public class Main {
                     findVal = finalValues.get(0);
                 }
                 System.out.println("Final Noun " + finalValues.get(1) + " Final Verb " + finalValues.get(2));
+                break;
+            case "3":
+                WireMapCross.generateGrid();
                 break;
             case "4":
                 PasswordCracker.PasswordValidation();
