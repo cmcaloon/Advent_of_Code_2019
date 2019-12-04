@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae3df1da-25b3-486f-8144-ef95fd1038bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/main/day1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/day1/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/main/day3/WireMapCross.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/day3/WireMapCross.java" afterDir="false" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +24,8 @@
       <file leaf-file-name="WireMapCross.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/main/day3/WireMapCross.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+            <state relative-caret-position="176">
+              <caret line="131" selection-start-line="131" selection-end-line="131" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -511,8 +509,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/main/day3/WireMapCross.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="176">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
