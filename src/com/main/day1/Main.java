@@ -11,6 +11,7 @@ public class Main {
         System.out.println("Enter the day numerically for execution");
         Scanner enterDay = new Scanner(System.in);
         String dayCalc = enterDay.nextLine();
+        long startTime = System.currentTimeMillis();
 
         switch(dayCalc)
         {
@@ -31,5 +32,8 @@ public class Main {
             default:
                 System.out.println("No Calculations found for the given day");
         }
+        long endTime   = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+        System.out.println(totalTime);
     }
 }
