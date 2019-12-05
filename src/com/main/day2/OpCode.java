@@ -1,5 +1,7 @@
 package com.main.day2;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class OpCode {
@@ -20,7 +22,7 @@ public class OpCode {
         return(verb);
     }
 
-    public static int opSwitch() {
+    public static List<Integer> opSwitch() {
         int[] opCode = setOpCode();
         opCode[1] = setNoun();
         opCode[2] = setVerb();
@@ -47,9 +49,9 @@ public class OpCode {
                         opCode[pos] = newVal;
                         break;
                     case 99:
-                        System.out.println("Operation Completed");
-                        System.out.println("Final Value " + opCode[0]);
-                        System.out.println("Noun is " + opCode[1] + " And verb is " + opCode[2]);
+                        //System.out.println("Operation Completed");
+                        //System.out.println("Final Value " + opCode[0]);
+                        //System.out.println("Noun is " + opCode[1] + " And verb is " + opCode[2]);
                         x = opCode.length;
                         break;
                     default:
@@ -59,6 +61,10 @@ public class OpCode {
                 }
 
             }
-        return(opCode[0]);
+        List<Integer> FinalVal = new ArrayList<>();
+        FinalVal.add(opCode[0]);
+        FinalVal.add(opCode[1]);
+        FinalVal.add(opCode[2]);
+        return(FinalVal);
     }
 }

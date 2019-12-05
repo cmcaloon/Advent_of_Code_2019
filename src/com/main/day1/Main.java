@@ -2,6 +2,8 @@ package com.main.day1;
 
 import com.main.day2.OpCode;
 import com.main.day4.PasswordCracker;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -17,9 +19,13 @@ public class Main {
                 FuelCounter.counterUpper();
                 break;
             case "2":
-                int findVal = 0;
-                while(findVal != 19690720)
-                    findVal = OpCode.opSwitch();
+                List<Integer> finalValues = OpCode.opSwitch();
+                int findVal = finalValues.get(0);
+                while(findVal != 19690720) {
+                    finalValues = OpCode.opSwitch();
+                    findVal = finalValues.get(0);
+                }
+                System.out.println("Final Noun " + finalValues.get(1) + " Final Verb " + finalValues.get(2));
                 break;
             case "4":
                 PasswordCracker.PasswordValidation();
