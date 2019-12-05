@@ -10,39 +10,34 @@ public class PasswordCracker {
         char isMultiple = 'a';
         boolean repeatDigit = false;
         boolean increaseDigit = true;
-        boolean multipleRepeatDigit = true;
+        boolean skipCompare = false;
+
         for(int x = 1; x < passString.length(); x++){
             char compareChar = passString.charAt(x);
-            if (startDigit < compareChar){
-                multipleRepeatDigit = true;
+            if (repeatDigit == true && startDigit < compareChar){
+                skipCompare = true;
             }
-            else if (startDigit == compareChar){
+
+            if (startDigit == compareChar && skipCompare == false){
                 if (isMultiple == startDigit){
-                    multipleRepeatDigit = false;
+                    repeatDigit = false;
                 }
-                repeatDigit = true;
-                isMultiple = startDigit;
+                else {
+                    repeatDigit = true;
+                    isMultiple = startDigit;
+                }
             }
             else if (startDigit > compareChar){
                 increaseDigit = false;
             }
             startDigit = compareChar;
         }
-        if (repeatDigit == true && increaseDigit == true && multipleRepeatDigit == true){
+        if (repeatDigit == true && increaseDigit == true){
             System.out.println("Match found for " + password);
             return(1);
         }
-        /*
-        else if (repeatDigit == false && increaseDigit == true) {
-            System.out.println("No repeating characters");
-            return (0);
-        }
-        else if (repeatDigit == true && increaseDigit == false) {
-            System.out.println("Decreasing digit found");
-            return (0);
-        }*/
+
         else {
-            //System.out.println("Not criteria met");
             return(0);
         }
 
@@ -52,7 +47,6 @@ public class PasswordCracker {
         int curPassVal = START_RANGE;
         int possiblePassword = 0;
         while(curPassVal < END_RANGE){
-            PasswordBreakdown(curPassVal);
             possiblePassword = possiblePassword + PasswordBreakdown(curPassVal);
             curPassVal++;
 
