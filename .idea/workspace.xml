@@ -5,12 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/main/day3/WireMapCross.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/day3/WireMapCross.java" afterDir="false" />
     </list>
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
@@ -60,6 +60,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> Update inital logic for day 3 part 2 solution
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -70,6 +72,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -139,30 +142,23 @@
       <pane id="AndroidView" />
     </panes>
   </component>
+=======
+  <component name="ProjectId" id="1UOZGKE08UNDuIUp2CcPRVAiKCY" />
+>>>>>>> Update inital logic for day 3 part 2 solution
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.main.day1.Main" />
       <module name="Advent_of_Code_2019" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
@@ -195,6 +191,7 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="ToolWindowManager">
     <frame x="1841" y="-303" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
@@ -247,22 +244,25 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
     </layout>
   </component>
+=======
+>>>>>>> Update inital logic for day 3 part 2 solution
   <component name="WindowStateProjectService">
-    <state width="1340" height="266" key="GridCell.Tab.0.bottom" timestamp="1575235188615">
+    <state x="629" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575518227282">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575235188615" />
-    <state width="1340" height="266" key="GridCell.Tab.0.center" timestamp="1575235188615">
+    <state x="629" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575518227282" />
+    <state width="1340" height="266" key="GridCell.Tab.0.bottom" timestamp="1575521262738">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575235188615" />
-    <state width="1340" height="266" key="GridCell.Tab.0.left" timestamp="1575235188614">
+    <state width="1340" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575521262738" />
+    <state width="1340" height="266" key="GridCell.Tab.0.center" timestamp="1575521262737">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575235188614" />
-    <state width="1340" height="266" key="GridCell.Tab.0.right" timestamp="1575235188615">
+    <state width="1340" height="266" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575521262737" />
+    <state width="1340" height="266" key="GridCell.Tab.0.left" timestamp="1575521262737">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+<<<<<<< HEAD
     <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575235188615" />
   </component>
   <component name="editorHistoryManager">
@@ -511,5 +511,16 @@
         </state>
       </provider>
     </entry>
+=======
+    <state width="1340" height="266" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575521262737" />
+    <state width="1340" height="266" key="GridCell.Tab.0.right" timestamp="1575521262738">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575521262738" />
+    <state x="838" y="277" width="672" height="678" key="search.everywhere.popup" timestamp="1575520552426">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="838" y="277" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575520552426" />
+>>>>>>> Update inital logic for day 3 part 2 solution
   </component>
 </project>

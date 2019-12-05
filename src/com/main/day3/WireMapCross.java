@@ -3,7 +3,7 @@ package com.main.day3;
 import java.util.HashMap;
 
 public class WireMapCross {
-    private static int smallestValue = 10000;
+    private static int smallestValue = 1000000;
 
     private static String[] wireDirections1 = {"R1004","D53","L10","U126","R130","U533","R48","D185","L768","U786","L445","U694","L659","D237","R432","U147","R590","U200","R878","D970","L308","D134","R617","U431","L631","D548","L300","D509","R660","U698","L958","U170","R572","U514","R387","D385","L670","D374","R898","U870","L545","D262","L699","D110","R58","D84","R77","D58","L891","U9","R320","D914","L161","D148","L266","D334","R442","D855","R349","D618","R272","U514","R584","D269","R608","U542","L335","U855","L646","D678","R720","U325","L792","U60","L828","D915","L487","D253","L911","U907","R392","D981","R965","D725","R308","D574","L997","D332","L927","D855","R122","D5","L875","D336","L395","U697","R806","U420","R718","D575","L824","U397","L308","D988","L855","U332","R838","U853","L91","U778","R265","U549","L847","D665","L804","D768","L736","D201","L825","U87","L747","D375","L162","U336","R375","U754","R468","U507","R256","D107","L79","U871","L155","D667","L448","D847","L193","U263","R154","U859","R696","D222","R189","D307","R332","U522","L345","D961","L161","U274","L122","U931","L812","D852","R906","D269","R612","D723","L304","U944","R64","D20","R401","D260","L95","U278","R128","U637","L554","D650","L116","D720","R12","D434","R514","U379","L899","D359","R815","D843","L994","U775","R63","D942","R655","D91","L236","U175","L813","D572","R520","U812","L657","D935","L886","D178","R618","U260","R7","D953","L158","D471","R309","D858","R25","U746","R40","U832","L544","D311","R122","D224","L281","D699","R147","D310","R659","D662","L990","U160","L969","D335","L923","U201","R336","D643","R226","D91","R88","U350","L303","U20","L157","U987","L305","U766","R253","D790","R977","U482","R283","U793","R785","D799","L511","D757","L689","D841","L233","U742","L551","D466","R66","U579","L18","U838","R554","D143","L996","U557","L783","D799","R36","D563","L244","U440","L8","D945","L346","D747","L769","U661","L485","U965","L569","U952","R57","U773","L267","U453","R424","U66","R763","U105","R285","D870","L179","U548","L46","U914","L251","U194","L559","U736","R768","D917","R617","D55","R185","D464","L244"};
 
@@ -21,9 +21,10 @@ public class WireMapCross {
 
     }
 
-    private static HashMap<Integer, HashMap<Integer, String>> ParseDirections(HashMap<Integer, HashMap<Integer, String>> wireMap, int directionSize, String[] directions){
+    private static void ParseDirections(HashMap<Integer, HashMap<Integer, String>> wireMap, int directionSize, String[] directions, boolean isSecond){
         int posX = 0;
         int posY = 0;
+        int iterateStep = 1;
         for (int x = 0; x < directionSize; x++){
             char movement = directions[x].charAt(0);
             String toInt = directions[x];
@@ -38,17 +39,24 @@ public class WireMapCross {
                             columnList = wireMap.get(posX);
                         }
                         if (wireMap.containsKey(posX) && wireMap.get(posX).containsKey(posY)){
-                            if (wireMap.get(posX).get(posY).equals("-")) {
-                                columnList.put(posY, "x");
-                                int intersection = Math.abs(posX) + Math.abs(posY);
-                                ShortestDistance(intersection);
+                            if (wireMap.get(posX).get(posY).contains("o")) {
+                                if (isSecond) {
+                                    int firstIterator = StringToInt(wireMap.get(posX).get(posY));
+                                    columnList.put(posY, "x" + iterateStep);
+                                    //int intersection = Math.abs(posX) + Math.abs(posY);
+                                    int intersection = Math.abs(iterateStep) + Math.abs(firstIterator);
+                                    ShortestDistance(intersection);
+                                }
+                                else columnList.put(posY, "x" + iterateStep);
+
                             } else
                                 System.out.println("Unexpected Char UP "+ wireMap.get(posX).get(posY));
                             columnList.put(posY, "?");
                         }
                         else
-                            columnList.put(posY, "-");
+                            columnList.put(posY, "o" + iterateStep);
                         wireMap.put(posX, columnList);
+                        iterateStep++;
                     }
                     break;
                 case 'D':
@@ -59,18 +67,24 @@ public class WireMapCross {
                             columnList = wireMap.get(posX);
                         }
                         if (wireMap.containsKey(posX) && wireMap.get(posX).containsKey(posY)) {
-                            if (wireMap.get(posX).get(posY).equals("-")) {
-                                columnList.put(y, "x");
-                                int intersection = Math.abs(posX) + Math.abs(posY);
-                                ShortestDistance(intersection);
+                            if (wireMap.get(posX).get(posY).contains("o")) {
+                                if (isSecond) {
+                                    int firstIterator = StringToInt(wireMap.get(posX).get(posY));
+                                    columnList.put(y, "x" + iterateStep);
+                                    //int intersection = Math.abs(posX) + Math.abs(posY);
+                                    int intersection = Math.abs(iterateStep) + Math.abs(firstIterator);
+                                    ShortestDistance(intersection);
+                                }
+                                else columnList.put(y, "x" + iterateStep);
                             } else {
                                 System.out.println("Unexpected Char Down " + wireMap.get(posX).get(posY) +" with coordinates " + posX + ":" + posY);
                                 columnList.put(posY, "A");
                             }
                         } else
-                            columnList.put(posY, "-");
+                            columnList.put(posY, "o" + iterateStep);
 
                         wireMap.put(posX, columnList);
+                        iterateStep++;
                     }
                     break;
                 case 'L':
@@ -81,11 +95,16 @@ public class WireMapCross {
                             columnList = wireMap.get(posX);
                         }
                         if (wireMap.containsKey(posX) && wireMap.get(posX).containsKey(posY)){
-                            if (wireMap.get(posX).get(posY).equals("-")) {
-                                columnList.put(posY, "x");
-                                wireMap.put(posX, columnList);
-                                int intersection = Math.abs(posX) + Math.abs(posY);
-                                ShortestDistance(intersection);
+                            if (wireMap.get(posX).get(posY).contains("o")) {
+                                if (isSecond) {
+                                    int firstIterator = StringToInt(wireMap.get(posX).get(posY));
+                                    columnList.put(posY, "x" + iterateStep);
+                                    wireMap.put(posX, columnList);
+                                    //int intersection = Math.abs(posX) + Math.abs(posY);
+                                    int intersection = Math.abs(iterateStep) + Math.abs(firstIterator);
+                                    ShortestDistance(intersection);
+                                }
+                                else columnList.put(posY, "x" + iterateStep);
                             } else {
                                 System.out.println("Unexpected Char LEFT "+ wireMap.get(posX).get(posY));
                                 columnList.put(posY, "?");
@@ -93,9 +112,10 @@ public class WireMapCross {
                             }
                         }
                         else {
-                            columnList.put(posY, "-");
+                            columnList.put(posY, "o" + iterateStep);
                             wireMap.put(posX, columnList);
                         }
+                        iterateStep++;
                     }
                     break;
                 case 'R':
@@ -106,19 +126,25 @@ public class WireMapCross {
                             columnList = wireMap.get(posX);
                         }
                         if (wireMap.containsKey(posX) && wireMap.get(posX).containsKey(posY)){
-                            if (wireMap.get(posX).get(posY).equals("-")) {
-                                columnList.put(posY, "x");
-                                int intersection = Math.abs(posX) + Math.abs(posY);
-                                ShortestDistance(intersection);
+                            if (wireMap.get(posX).get(posY).contains("o")) {
+                                if (isSecond) {
+                                    int firstIterator = StringToInt(wireMap.get(posX).get(posY));
+                                    columnList.put(posY, "x" + iterateStep);
+                                    //int intersection = Math.abs(posX) + Math.abs(posY);
+                                    int intersection = Math.abs(iterateStep) + Math.abs(firstIterator);
+                                    ShortestDistance(intersection);
+                                }
+                                else columnList.put(posY, "x" + iterateStep);
                             } else {
                                 System.out.println("Unexpected Char RIGHT "+ wireMap.get(posX).get(posY));
                                 columnList.put(posY, "?");
                             }
                         }
                         else {
-                            columnList.put(posY, "-");
+                            columnList.put(posY, "o" + iterateStep);
                         }
                         wireMap.put(posX, columnList);
+                        iterateStep++;
                     }
                     break;
                 default:
@@ -127,21 +153,20 @@ public class WireMapCross {
 
 
         }
-        return(wireMap);
     }
 
     private static void outputGrid(HashMap<Integer, HashMap<Integer, String>> wireMap) {
         HashMap<Integer, String> yInit = new HashMap<>();
 
         //Set Starting point
-        yInit.put(0, "-");
+        yInit.put(0, "o0");
         wireMap.put(0,yInit);
 
         int directionSize = wireDirections1.length;
-        wireMap = ParseDirections(wireMap, directionSize, wireDirections1);
+        ParseDirections(wireMap, directionSize, wireDirections1, false);
 
         directionSize = wireDirections2.length;
-        ParseDirections(wireMap, directionSize, wireDirections2);
+        ParseDirections(wireMap, directionSize, wireDirections2, true);
 
     }
 
