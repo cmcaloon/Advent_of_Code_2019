@@ -33,7 +33,7 @@ public class PasswordCracker {
             startDigit = compareChar;
         }
         if (repeatDigit == true && increaseDigit == true){
-            System.out.println("Match found for " + password);
+            //System.out.println("Match found for " + password);
             return(1);
         }
 
