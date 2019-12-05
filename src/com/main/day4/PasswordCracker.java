@@ -1,8 +1,8 @@
 package com.main.day4;
 
 public class PasswordCracker {
-    static int START_RANGE = 387638;
-    static int END_RANGE = 919123;
+    private static final int START_RANGE = 387638;
+    private static final int END_RANGE = 919123;
 
     static int PasswordBreakdown(int password){
         String passString = "" + password;
@@ -14,11 +14,11 @@ public class PasswordCracker {
 
         for(int x = 1; x < passString.length(); x++){
             char compareChar = passString.charAt(x);
-            if (repeatDigit == true && startDigit < compareChar){
+            if (repeatDigit && startDigit < compareChar){
                 skipCompare = true;
             }
 
-            if (startDigit == compareChar && skipCompare == false){
+            if (startDigit == compareChar && !skipCompare){
                 if (isMultiple == startDigit){
                     repeatDigit = false;
                 }
@@ -32,8 +32,8 @@ public class PasswordCracker {
             }
             startDigit = compareChar;
         }
-        if (repeatDigit == true && increaseDigit == true){
-            System.out.println("Match found for " + password);
+        if (repeatDigit && increaseDigit){
+            //System.out.println("Match found for " + password);
             return(1);
         }
 
