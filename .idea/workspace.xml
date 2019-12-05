@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae3df1da-25b3-486f-8144-ef95fd1038bd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/main/day3/WireMapCross.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/day3/WireMapCross.java" afterDir="false" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +25,8 @@
       <file leaf-file-name="WireMapCross.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/main/day3/WireMapCross.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="131" selection-start-line="131" selection-end-line="131" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="393">
+              <caret line="150" column="79" selection-start-line="150" selection-start-column="79" selection-end-line="150" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -279,9 +277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="43" column="82" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -422,9 +417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2385">
           <caret line="159" column="29" lean-forward="true" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -446,9 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -470,9 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -494,9 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -509,11 +492,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/main/day3/WireMapCross.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="393">
+          <caret line="150" column="79" selection-start-line="150" selection-start-column="79" selection-end-line="150" selection-end-column="79" />
         </state>
       </provider>
     </entry>
