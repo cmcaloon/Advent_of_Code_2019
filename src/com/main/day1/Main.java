@@ -32,6 +32,9 @@ public class Main {
             case "3":
                 WireMapCross.generateGrid();
                 break;
+            case "3":
+                WireMapCross.generateGrid();
+                break;
             case "4":
                 PasswordCracker.PasswordValidation();
                 break;

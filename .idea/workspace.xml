@@ -11,6 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
@@ -62,6 +63,8 @@
   </component>
 =======
 >>>>>>> Update inital logic for day 3 part 2 solution
+=======
+>>>>>>> ac366ac9f7e6daec921e969e188ff59bb751fa79
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -72,6 +75,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -145,6 +149,9 @@
 =======
   <component name="ProjectId" id="1UOZGKE08UNDuIUp2CcPRVAiKCY" />
 >>>>>>> Update inital logic for day 3 part 2 solution
+=======
+  <component name="ProjectId" id="1UOZGKE08UNDuIUp2CcPRVAiKCY" />
+>>>>>>> ac366ac9f7e6daec921e969e188ff59bb751fa79
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -191,6 +198,7 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <component name="ToolWindowManager">
     <frame x="1841" y="-303" width="1680" height="1027" extended-state="0" />
@@ -246,6 +254,8 @@
   </component>
 =======
 >>>>>>> Update inital logic for day 3 part 2 solution
+=======
+>>>>>>> ac366ac9f7e6daec921e969e188ff59bb751fa79
   <component name="WindowStateProjectService">
     <state x="629" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575518227282">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -262,6 +272,7 @@
     <state width="1340" height="266" key="GridCell.Tab.0.left" timestamp="1575521262737">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575235188615" />
   </component>
@@ -512,6 +523,8 @@
       </provider>
     </entry>
 =======
+=======
+>>>>>>> ac366ac9f7e6daec921e969e188ff59bb751fa79
     <state width="1340" height="266" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575521262737" />
     <state width="1340" height="266" key="GridCell.Tab.0.right" timestamp="1575521262738">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -521,6 +534,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="838" y="277" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575520552426" />
+<<<<<<< HEAD
 >>>>>>> Update inital logic for day 3 part 2 solution
+=======
+>>>>>>> ac366ac9f7e6daec921e969e188ff59bb751fa79
   </component>
 </project>
