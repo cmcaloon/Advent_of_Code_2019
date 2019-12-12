@@ -1,9 +1,6 @@
 package com.main.day2;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class OpCode {
 
@@ -99,66 +96,93 @@ public class OpCode {
         return(currentFactor);
     }
 
-    public static HashMap<Integer, Integer> opSwitch(HashMap<Integer, Integer> opCode, int instructionLoc, int maxSet) {
+    public static int opSwitch(HashMap<Integer, Integer> opCode, int instructionLoc, int maxSet) {
                 int currentInstruction = opCode.get(instructionLoc);
                 int opCodeData = FindOpCode(currentInstruction);
                 int factor1;
                 int factor2;
 
-                int pos = opCode.get(instructionLoc+3);
+                int pos;
+
                 int newVal;
-                //System.out.println("Current instruction " + opCode[instructionLoc]);
                 switch(opCodeData)
                 {
                     case 1:
                         factor1 = FindFactor(currentInstruction, opCode.get(instructionLoc+1), 1, opCode);
                         factor2 = FindFactor(currentInstruction, opCode.get(instructionLoc+2), 2, opCode);
+                        pos = opCode.get(instructionLoc+3);
                         newVal = factor1 + factor2;
-                        //System.out.println("Adding " + factor1 + " and " + factor2);
-                        //System.out.println("Output = " + newVal);
                         opCode.put(pos, newVal);
-                        //System.out.println("At position " + pos + " saving value -- " + opCode.get(pos));
 
-                        //instructionLoc = instructionLoc + 4;
+                        instructionLoc = instructionLoc + 4;
                         break;
                     case 2:
                         factor1 = FindFactor(currentInstruction, opCode.get(instructionLoc+1), 1, opCode);
                         factor2 = FindFactor(currentInstruction, opCode.get(instructionLoc+2), 2, opCode);
+                        pos = opCode.get(instructionLoc+3);
                         newVal = factor1 * factor2;
-                        //System.out.println("Multiplying " + factor1 + " and " + factor2);
-                       // System.out.println("Output = " + newVal);
                         opCode.put(pos, newVal);
-                        //System.out.println("At position " + pos + " saving value -- " + opCode.get(pos));
-
-
+                        instructionLoc = instructionLoc + 4;
                         break;
                     case 3:
                         //Day 5
-                        //factor1 = FindFactor(currentInstruction, opCode[instructionLoc+1], 1, opCode);
-                        System.out.println(opCode.get(instructionLoc+1) + " Change Op Code factor 1 ");
+                        System.out.println("Enter the diagnostic code");
+                        Scanner code3Input = new Scanner(System.in);
+                        String code3 = code3Input.nextLine();
+                        int instructionInput = Integer.parseInt(code3);
                         int newPos = opCode.get(instructionLoc+1);
-                        opCode.put(newPos, 1);
-                        //instructionLoc = instructionLoc + 2;
+                        opCode.put(newPos, instructionInput);
+                        instructionLoc = instructionLoc + 2;
                         break;
                     case 4:
                         //Day 5
                         factor1 = FindFactor(currentInstruction, opCode.get(instructionLoc+1), 1, opCode);
-                        //int output = opCode.get(factor1);
                         System.out.println(factor1);
-                        //instructionLoc = instructionLoc+2;
+                        instructionLoc = instructionLoc+2;
+                        break;
+                    case 5:
+                        factor1 = FindFactor(currentInstruction, opCode.get(instructionLoc+1), 1, opCode);
+                        factor2 = FindFactor(currentInstruction, opCode.get(instructionLoc+2), 2, opCode);
+                        if (factor1 != 0)
+                            instructionLoc = factor2;
+                        else instructionLoc = instructionLoc+3;
+                        break;
+                    case 6:
+                        factor1 = FindFactor(currentInstruction, opCode.get(instructionLoc+1), 1, opCode);
+                        factor2 = FindFactor(currentInstruction, opCode.get(instructionLoc+2), 2, opCode);
+                        if (factor1 == 0)
+                            instructionLoc = factor2;
+                        else instructionLoc = instructionLoc+3;
+                        break;
+                    case 7:
+                        factor1 = FindFactor(currentInstruction, opCode.get(instructionLoc+1), 1, opCode);
+                        factor2 = FindFactor(currentInstruction, opCode.get(instructionLoc+2), 2, opCode);
+                        pos = opCode.get(instructionLoc+3);
+                        if (factor1 < factor2)
+                            opCode.put(pos, 1);
+                        else
+                            opCode.put(pos, 0);
+                        instructionLoc = instructionLoc+4;
+                        break;
+                    case 8:
+                        factor1 = FindFactor(currentInstruction, opCode.get(instructionLoc+1), 1, opCode);
+                        factor2 = FindFactor(currentInstruction, opCode.get(instructionLoc+2), 2, opCode);
+                        pos = opCode.get(instructionLoc+3);
+                        if (factor1 == factor2)
+                            opCode.put(pos, 1);
+                        else
+                            opCode.put(pos, 0);
+                        instructionLoc = instructionLoc+4;
                         break;
                     case 99:
-                        //System.out.println("Operation Completed");
-                        //System.out.println("Final Value " + opCode[0]);
-                        //System.out.println("Noun is " + opCode[1] + " And verb is " + opCode[2]);
-                        //instructionLoc = maxSet;
+                        instructionLoc = maxSet;
                         break;
                     default:
                         System.out.println("Invalid opCode found");
-                        //instructionLoc = maxSet;
+                        instructionLoc = maxSet;
                         break;
                 }
-                return(opCode);
+                return(instructionLoc);
         }
     public static List<Integer> CalcOpCode(String day) {
         day = day.toUpperCase();
@@ -180,15 +204,8 @@ public class OpCode {
 
         int instructionLoc = 0;
         while(instructionLoc < maxSet) {
-            opCode = opSwitch(opCode, instructionLoc, maxSet);
-            if(FindOpCode(opCode.get(instructionLoc)) == 1 || FindOpCode(opCode.get(instructionLoc)) == 2)
-                instructionLoc = instructionLoc + 4;
-            else if (FindOpCode(opCode.get(instructionLoc)) == 3 || FindOpCode(opCode.get(instructionLoc)) == 4)
-                instructionLoc = instructionLoc + 2;
-            else if  (FindOpCode(opCode.get(instructionLoc)) == 99)
-                instructionLoc = maxSet;
-            else instructionLoc++;
-            //System.out.println("Loop " + instructionLoc);
+            int instruct = FindOpCode(opCode.get(instructionLoc));
+            instructionLoc = opSwitch(opCode, instructionLoc, maxSet);
         }
 
 
