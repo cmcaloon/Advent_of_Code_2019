@@ -21,10 +21,10 @@ public class Main {
                 FuelCounter.counterUpper();
                 break;
             case "2":
-                List<Integer> finalValues = OpCode.opSwitch();
+                List<Integer> finalValues = OpCode.CalcOpCode("DAY2");
                 int findVal = finalValues.get(0);
                 while(findVal != 19690720) {
-                    finalValues = OpCode.opSwitch();
+                    finalValues = OpCode.CalcOpCode("DAY2");
                     findVal = finalValues.get(0);
                 }
                 System.out.println("Final Noun " + finalValues.get(1) + " Final Verb " + finalValues.get(2));
@@ -35,11 +35,14 @@ public class Main {
             case "4":
                 PasswordCracker.PasswordValidation();
                 break;
+            case "5":
+                OpCode.CalcOpCode("DAY5");
+                break;
             default:
                 System.out.println("No Calculations found for the given day");
         }
         long endTime   = System.currentTimeMillis();
         long totalTime = endTime - startTime;
-        System.out.println(totalTime);
+        System.out.println(totalTime + " Milliseconds");
     }
 }
